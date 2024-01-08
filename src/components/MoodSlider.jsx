@@ -29,7 +29,7 @@ const MoodSlider = ({ onMoodChange }) => {
         step={25}
         onChange={handleSliderChange}
       />
-      <p className="font-quicksand font-bold text-xl">Current Mood: {currentMood}</p>
+      <p className="font-quicksand font-bold text-xl text-dark-blue">Current Mood: {currentMood}</p>
     </div>
 
     

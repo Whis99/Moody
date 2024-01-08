@@ -18,6 +18,8 @@ export default {
         quicksand: ['Quicksand', 'sans-serif'],
       },
       colors: {
+        'white': "#ffffff",
+        "white-smoke": "#f8f8f8",
         'red': "#bd0000",
         "cyan": "#00b1c4",
         "light-blue": "#0083c4",
