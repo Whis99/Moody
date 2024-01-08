@@ -18,10 +18,10 @@ const Home = () =>{
                 <img src={gosthy} className="w-40 h-auto" alt="Vite logo" />
             </div>
 
-            <h1 className="font-quicksand font-bold">Welcome to M☺☻dy</h1>
+            <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-cyan via-purple to-orange font-quicksand font-bold">Welcome to M☺☻dy</h1>
             
             <div className="card">
-                <button onClick={() => handleClick()}>
+                <button className='bg-cyan hover:bg-dark-blue' onClick={() => handleClick()}>
                 Get started
                 </button>
             </div>

@@ -17,6 +17,14 @@ export default {
         roboto: ['Roboto', 'sans-serif'],
         quicksand: ['Quicksand', 'sans-serif'],
       },
+      colors: {
+        'red': "#bd0000",
+        "cyan": "#00b1c4",
+        "light-blue": "#0083c4",
+        "dark-blue": "#007c8a",
+        "orange": "#f09000",
+        "purple": "#a303a3"
+      },
       screens: {
         "wide": "1440px"
       },

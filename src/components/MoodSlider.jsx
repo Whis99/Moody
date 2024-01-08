@@ -21,18 +21,15 @@ const MoodSlider = ({ onMoodChange }) => {
   };
 
   return (
-    <div className="w-3/4 mx-auto text-center">
-      <input
-        type="range"
-        min="0"
-        max="100"
-        step="25"
-        value={currentMood}
+    <div className="w-3/4 mx-auto text-center">   
+      <Slider 
+        defaultValue={currentMood}
+        min={0}
+        max={100}
+        step={25}
         onChange={handleSliderChange}
-        className="w-full h-8"
       />
-      <p>Current Mood: {currentMood}</p>
-      <Slider defaultValue={50} />
+      <p className="font-quicksand font-bold text-xl">Current Mood: {currentMood}</p>
     </div>
 
     

@@ -10,7 +10,7 @@ const MoodTrack = () =>{
     return(
         <main>
             <section>
-                <h1 className="font-quicksand font-bold">
+                <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-cyan via-purple to-orange font-quicksand font-bold pb-10">
                     What's your mood today
                 </h1>
             </section>
