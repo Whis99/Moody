@@ -8,7 +8,8 @@ const Home = () =>{
     const navigate = useNavigate();
 
     const handleClick = () => { 
-        navigate('/moodtrack')
+        // navigate('/moodtrack')
+        navigate('/sign_up')
     }
 
     return(
