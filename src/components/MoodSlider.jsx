@@ -6,7 +6,7 @@ const MoodSlider = ({ onMoodChange }) => {
 
   const handleSliderChange = (event) => {
     // Mood options
-    const moodOptions = ['Happy', 'Excited', 'Calm', 'Sad', 'Angry'];
+    const moodOptions = ['Happy', 'Excited', 'Calm', 'Tired', 'Sad', 'Angry'];
     
     // Calculate the index based on the slider value
     const index = Math.round((event.target.value / 100) * (moodOptions.length - 1));
