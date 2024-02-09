@@ -20,6 +20,7 @@ export default {
       colors: {
         'white': "#ffffff",
         "white-smoke": "#f8f8f8",
+        "grey": "#808080",
         'red': "#bd0000",
         "cyan": "#00b1c4",
         "light-blue": "#0083c4",

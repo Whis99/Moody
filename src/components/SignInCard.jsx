@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
+import TextInput from './TextInput';
+import PasswordInput from './PasswordInput';
+import SignInButton from './SignInButton';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
@@ -38,12 +41,26 @@ const SignIn = () => {
   };
 
   return (
-    <div>
-      <h2>Sign In</h2>
-      <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
-      <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
-      <button onClick={handleSignIn}>Sign In</button>
-    </div>
+    <main>
+
+      <section className="relative py-3 bg-white-smoke shadow-xl rounded-lg">
+        <div className="container mx-auto px-20">
+            <h1 className=" font-bold mt-10 text-center font-quicksand text-dark-blue pb-5 ">Sign In</h1>
+
+                  <TextInput label='E-mail' placeholder="Entrer email adress" value={email} onChange={(e) => setEmail(e.target.value)} />
+                  <PasswordInput label='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
+                  <div className="px-10">
+                  <SignInButton label={"Sign in"} handleClick={handleSignIn} />
+                                 
+                </div>
+
+            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg">
+              
+            </div>
+        </div>
+      </section>
+    </main>
+    
   );
 };
 
