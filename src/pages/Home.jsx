@@ -9,7 +9,7 @@ const Home = () =>{
 
     const handleClick = () => { 
         // navigate('/moodtrack')
-        navigate('/sign_up')
+        navigate('/sign_in')
     }
 
     return(

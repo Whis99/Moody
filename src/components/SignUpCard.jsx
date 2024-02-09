@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-// import { getAuth, createUserWithEmailAndPassword } from './firebase/auth';
-// import { initializeApp } from 'firebase/app';
 import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 
 const SignUpCard = () => {
@@ -19,7 +17,7 @@ const SignUpCard = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(error);
+        console.log(errorCode);
         console.log(errorMessage);
       });
     } 
