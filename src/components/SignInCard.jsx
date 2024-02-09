@@ -1,13 +1,16 @@
 import React, { useState } from 'react';
-import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
+import { useNavigate } from "react-router-dom";
+import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const auth = getAuth();
+  const navigate = useNavigate();
 
   const handleSignIn = async () => {
+
     await signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // Signed in 
@@ -20,6 +23,18 @@ const SignIn = () => {
       console.log(errorCode);
       console.log(errorMessage);
     });
+
+    await onAuthStateChanged(auth, (user) => {
+      if (user) {
+        const uid = user.uid;
+        navigate('/moodtrack')
+
+      } else {
+        // User is signed out
+        // ...
+      }
+    });
+
   };
 
   return (
