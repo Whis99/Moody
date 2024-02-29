@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
 import TextInput from './TextInput';
 import PasswordInput from './PasswordInput';
@@ -73,11 +74,21 @@ const SignIn = () => {
               />
               </div>
 
+              <div>
+                  <p 
+                    className="flex text-sm font-quicksand text-gray-500">
+                      Don't have an account.  
+                      <Link to="/sign_up">Sign up</Link>
+                  </p>
+              </div>
+
               <div className="group">
                 <LogInButton 
                   label={"Login"} 
                   handleClick={handleSignIn} />
               </div>
+
+              
           </div>
       </section>
     </main>

@@ -61,7 +61,7 @@ const SignUpCard = () => {
 
               <div className="group">
                 <SignUpButton 
-                  label={"Login"} 
+                  label={"Sign Up"} 
                   handleClick={createAccount} />
               </div>
 
