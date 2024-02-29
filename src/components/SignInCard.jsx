@@ -3,7 +3,9 @@ import { useNavigate } from "react-router-dom";
 import { getAuth, signInWithEmailAndPassword, onAuthStateChanged } from 'firebase/auth';
 import TextInput from './TextInput';
 import PasswordInput from './PasswordInput';
-import SignInButton from './SignInButton';
+import LogInButton from './AuthButton';
+import ghosty from '../assets/Gosthy.png'
+
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
@@ -42,22 +44,41 @@ const SignIn = () => {
 
   return (
     <main>
-
-      <section className="relative py-3 bg-white-smoke shadow-xl rounded-lg">
-        <div className="container mx-auto px-20">
-            <h1 className=" font-bold mt-10 text-center font-quicksand text-dark-blue pb-5 ">Sign In</h1>
-
-                  <TextInput label='E-mail' placeholder="Entrer email adress" value={email} onChange={(e) => setEmail(e.target.value)} />
-                  <PasswordInput label='Password' value={password} onChange={(e) => setPassword(e.target.value)} />
-                  <div className="px-10">
-                  <SignInButton label={"Sign in"} handleClick={handleSignIn} />
-                                 
-                </div>
-
-            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg">
-              
+      <section 
+        className="relative py-3 bg-white-smoke shadow-xl 
+        rounded-lg flex items-center justify-center py-12 
+        px-4 sm:px-6 lg:px-8">
+          <div className="max-w-md w-full space-y-8">
+            <div>
+              <img
+                className="mx-auto h-14 w-auto mt-3"
+                src={ghosty}
+              />
+              <h2 className="mt-2 text-center text-lg font-quicksand font-bold text-gray-500">
+                Sign in to continue to Mooody
+              </h2>
             </div>
-        </div>
+
+              <div className="rounded-md shadow-sm -space-y-px">
+              <TextInput 
+                placeholder="Email address" 
+                value={email} 
+                onChange={(e) => setEmail(e.target.value)} 
+              />
+
+              <PasswordInput 
+                label='Password' 
+                value={password} 
+                onChange={(e) => setPassword(e.target.value)} 
+              />
+              </div>
+
+              <div className="group">
+                <LogInButton 
+                  label={"Login"} 
+                  handleClick={handleSignIn} />
+              </div>
+          </div>
       </section>
     </main>
     

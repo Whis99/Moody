@@ -3,9 +3,16 @@ const PasswordInput = ({ label, hideLabel }) => {
     return (
         <div className={`${hideLabel? 'mt-1' : 'mt-4'}`}>
             {!hideLabel && <label className="block text-white-smoke">{label}</label>}
-            <input type="password" name="password" id={label} placeholder={placeholder} minLength="6" 
-            className="w-full px-4 py-3 rounded-lg bg-white mt-2 border focus:border-grey 
-            focus:bg-white focus:outline-none" required />
+            <input 
+            type="password" 
+            name="password" 
+            id={label} 
+            placeholder={placeholder} 
+            minLength="6" 
+            className="appearance-none rounded-none relative block w-full px-3 py-2 
+            border border-gray-300 placeholder-gray-500 text-gray-500 bg-white-smoke rounded-t-md 
+            focus:outline-none focus:ring-indigo-500 focus:ring-opacity-50"
+            required />
         </div>
     )
 }
